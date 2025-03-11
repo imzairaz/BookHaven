@@ -29,12 +29,13 @@ namespace BookHaven
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Books));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Books));
             this.panelSide = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnBookOrder = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnReport = new Guna.UI2.WinForms.Guna2Button();
@@ -68,7 +69,6 @@ namespace BookHaven
             this.lblGenre = new System.Windows.Forms.Label();
             this.lblAuthor = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnBookOrder = new Guna.UI2.WinForms.Guna2Button();
             this.panelSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbxMain)).BeginInit();
             this.panelTop.SuspendLayout();
@@ -94,6 +94,30 @@ namespace BookHaven
             this.panelSide.Name = "panelSide";
             this.panelSide.Size = new System.Drawing.Size(191, 600);
             this.panelSide.TabIndex = 0;
+            // 
+            // btnBookOrder
+            // 
+            this.btnBookOrder.Animated = true;
+            this.btnBookOrder.BackColor = System.Drawing.Color.Transparent;
+            this.btnBookOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBookOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBookOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBookOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBookOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBookOrder.Font = new System.Drawing.Font("Helvetica", 11F, System.Drawing.FontStyle.Bold);
+            this.btnBookOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnBookOrder.HoverState.FillColor = System.Drawing.Color.Teal;
+            this.btnBookOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnBookOrder.Image")));
+            this.btnBookOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBookOrder.Location = new System.Drawing.Point(0, 350);
+            this.btnBookOrder.Name = "btnBookOrder";
+            this.btnBookOrder.Size = new System.Drawing.Size(191, 45);
+            this.btnBookOrder.TabIndex = 9;
+            this.btnBookOrder.Text = "Re-Stock";
+            this.btnBookOrder.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBookOrder.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnBookOrder.UseTransparentBackground = true;
+            this.btnBookOrder.Click += new System.EventHandler(this.btnBookOrder_Click);
             // 
             // btnLogout
             // 
@@ -184,7 +208,7 @@ namespace BookHaven
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(191, 45);
             this.btnInventory.TabIndex = 5;
-            this.btnInventory.Text = "Inventory";
+            this.btnInventory.Text = "Books";
             this.btnInventory.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnInventory.TextOffset = new System.Drawing.Point(15, 0);
             this.btnInventory.UseTransparentBackground = true;
@@ -707,26 +731,16 @@ namespace BookHaven
             this.cmbGenre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbGenre.ItemHeight = 30;
             this.cmbGenre.Items.AddRange(new object[] {
+            "Classic",
+            "Dystopian",
+            "Fiction",
             "Adventure",
-            "Mystery",
-            "ScienceFiction",
-            "Fantasy",
             "Romance",
-            "Thriller",
-            "Non-Fiction",
-            "History",
-            "Biography",
-            "Science",
-            "Poetry",
-            "Cookbooks",
-            "Art",
-            "Self-Help",
-            "Business",
-            "Horror",
-            "Drama",
-            "Philosophy",
-            "Programming",
-            "Travel"});
+            "Coming-of-age",
+            "Dystopian",
+            "Historical Fiction",
+            "Psychological Fiction",
+            "Fantasy"});
             this.cmbGenre.Location = new System.Drawing.Point(543, 34);
             this.cmbGenre.Name = "cmbGenre";
             this.cmbGenre.Size = new System.Drawing.Size(200, 36);
@@ -771,30 +785,6 @@ namespace BookHaven
             this.lblTitle.Size = new System.Drawing.Size(50, 17);
             this.lblTitle.TabIndex = 9;
             this.lblTitle.Text = "Name";
-            // 
-            // btnBookOrder
-            // 
-            this.btnBookOrder.Animated = true;
-            this.btnBookOrder.BackColor = System.Drawing.Color.Transparent;
-            this.btnBookOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBookOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBookOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBookOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBookOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnBookOrder.Font = new System.Drawing.Font("Helvetica", 11F, System.Drawing.FontStyle.Bold);
-            this.btnBookOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnBookOrder.HoverState.FillColor = System.Drawing.Color.Teal;
-            this.btnBookOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnBookOrder.Image")));
-            this.btnBookOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBookOrder.Location = new System.Drawing.Point(0, 350);
-            this.btnBookOrder.Name = "btnBookOrder";
-            this.btnBookOrder.Size = new System.Drawing.Size(191, 45);
-            this.btnBookOrder.TabIndex = 9;
-            this.btnBookOrder.Text = "Book Orders";
-            this.btnBookOrder.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBookOrder.TextOffset = new System.Drawing.Point(15, 0);
-            this.btnBookOrder.UseTransparentBackground = true;
-            this.btnBookOrder.Click += new System.EventHandler(this.btnBookOrder_Click);
             // 
             // Admin_Books
             // 

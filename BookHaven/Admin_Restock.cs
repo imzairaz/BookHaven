@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace BookHaven
 {
-    public partial class Restock : Form
+    public partial class Admin_Restock : Form
     {
         private string connectionString = @"Data Source=Zai\SQLEXPRESS;Initial Catalog=BookHeaven;Integrated Security=True";
 
-        public Restock()
+        public Admin_Restock()
         {
             InitializeComponent();
             // Hook up the Form Load event

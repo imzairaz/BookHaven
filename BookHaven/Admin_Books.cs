@@ -262,7 +262,7 @@ namespace BookHaven
 
         private void btnBookOrder_Click(object sender, EventArgs e)
         {
-            Restock Obj = new Restock();
+            Admin_Restock Obj = new Admin_Restock();
             Obj.Show();
             this.Hide();
         }

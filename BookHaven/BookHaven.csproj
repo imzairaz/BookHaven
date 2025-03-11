@@ -118,11 +118,11 @@
     <Compile Include="Clerk_Sale.Designer.cs">
       <DependentUpon>Clerk_Sale.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_RE.cs">
+    <Compile Include="Admin_RestockOLD1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_RE.Designer.cs">
-      <DependentUpon>Admin_RE.cs</DependentUpon>
+    <Compile Include="Admin_RestockOLD1.Designer.cs">
+      <DependentUpon>Admin_RestockOLD1.cs</DependentUpon>
     </Compile>
     <Compile Include="Loading.cs">
       <SubType>Form</SubType>
@@ -156,11 +156,11 @@
     <Compile Include="Admin_RestockOLD.Designer.cs">
       <DependentUpon>Admin_RestockOLD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Restock.cs">
+    <Compile Include="Admin_Restock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Restock.Designer.cs">
-      <DependentUpon>Restock.cs</DependentUpon>
+    <Compile Include="Admin_Restock.Designer.cs">
+      <DependentUpon>Admin_Restock.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin_Dash.resx">
       <DependentUpon>Admin_Dash.cs</DependentUpon>
@@ -190,7 +190,7 @@
       <DependentUpon>Clerk_Sale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Admin_RE.cs</DependentUpon>
+      <DependentUpon>Admin_RestockOLD1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
@@ -216,8 +216,8 @@
     <EmbeddedResource Include="Admin_RestockOLD.resx">
       <DependentUpon>Admin_RestockOLD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Restock.resx">
-      <DependentUpon>Restock.cs</DependentUpon>
+    <EmbeddedResource Include="Admin_Restock.resx">
+      <DependentUpon>Admin_Restock.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

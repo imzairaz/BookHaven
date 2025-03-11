@@ -25,7 +25,7 @@ namespace BookHaven
         int StartPoint = 0;
         private void Timer_Tick(object sender, EventArgs e)
         {
-            StartPoint += 1;
+            StartPoint += 10;
             ProgressBar.Value = StartPoint;
             lblPercent.Text = StartPoint + "%";
             if (ProgressBar.Value == 100)

@@ -181,7 +181,7 @@ namespace BookHaven
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(191, 45);
             this.btnInventory.TabIndex = 5;
-            this.btnInventory.Text = "Inventory";
+            this.btnInventory.Text = "Books";
             this.btnInventory.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnInventory.TextOffset = new System.Drawing.Point(15, 0);
             this.btnInventory.UseTransparentBackground = true;
