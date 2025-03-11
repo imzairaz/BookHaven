@@ -48,11 +48,11 @@ namespace BookHaven
             this.lbltitle.BackColor = System.Drawing.Color.Transparent;
             this.lbltitle.Font = new System.Drawing.Font("Helvetica", 30.25F, System.Drawing.FontStyle.Bold);
             this.lbltitle.ForeColor = System.Drawing.Color.White;
-            this.lbltitle.Location = new System.Drawing.Point(52, 163);
+            this.lbltitle.Location = new System.Drawing.Point(64, 180);
             this.lbltitle.Name = "lbltitle";
-            this.lbltitle.Size = new System.Drawing.Size(526, 49);
+            this.lbltitle.Size = new System.Drawing.Size(502, 49);
             this.lbltitle.TabIndex = 0;
-            this.lbltitle.Text = "Welcome to Book Heaven";
+            this.lbltitle.Text = "Welcome to Book Haven";
             // 
             // lblLoading
             // 
@@ -99,7 +99,7 @@ namespace BookHaven
             this.ProgressBar.Margin = new System.Windows.Forms.Padding(4);
             this.ProgressBar.MaximumValue = 100;
             this.ProgressBar.Name = "ProgressBar";
-            this.ProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ProgressBar.Size = new System.Drawing.Size(630, 23);
             this.ProgressBar.TabIndex = 6;
             this.ProgressBar.Value = 0;
