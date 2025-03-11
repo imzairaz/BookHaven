@@ -109,7 +109,7 @@ namespace BookHaven
             this.btnBookOrder.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnBookOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnBookOrder.Image")));
             this.btnBookOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBookOrder.Location = new System.Drawing.Point(0, 350);
+            this.btnBookOrder.Location = new System.Drawing.Point(0, 326);
             this.btnBookOrder.Name = "btnBookOrder";
             this.btnBookOrder.Size = new System.Drawing.Size(191, 45);
             this.btnBookOrder.TabIndex = 9;
@@ -156,7 +156,7 @@ namespace BookHaven
             this.btnSettings.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSettings.Location = new System.Drawing.Point(0, 462);
+            this.btnSettings.Location = new System.Drawing.Point(0, 422);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(191, 45);
             this.btnSettings.TabIndex = 7;
@@ -180,7 +180,7 @@ namespace BookHaven
             this.btnReport.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
             this.btnReport.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnReport.Location = new System.Drawing.Point(0, 406);
+            this.btnReport.Location = new System.Drawing.Point(0, 374);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(191, 45);
             this.btnReport.TabIndex = 6;
@@ -204,7 +204,7 @@ namespace BookHaven
             this.btnInventory.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
             this.btnInventory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnInventory.Location = new System.Drawing.Point(0, 294);
+            this.btnInventory.Location = new System.Drawing.Point(0, 278);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(191, 45);
             this.btnInventory.TabIndex = 5;
@@ -228,7 +228,7 @@ namespace BookHaven
             this.btnSupplier.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnSupplier.Image = ((System.Drawing.Image)(resources.GetObject("btnSupplier.Image")));
             this.btnSupplier.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSupplier.Location = new System.Drawing.Point(0, 238);
+            this.btnSupplier.Location = new System.Drawing.Point(0, 230);
             this.btnSupplier.Name = "btnSupplier";
             this.btnSupplier.Size = new System.Drawing.Size(191, 45);
             this.btnSupplier.TabIndex = 4;
@@ -276,7 +276,7 @@ namespace BookHaven
             this.btnDash.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnDash.Image = ((System.Drawing.Image)(resources.GetObject("btnDash.Image")));
             this.btnDash.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDash.Location = new System.Drawing.Point(0, 126);
+            this.btnDash.Location = new System.Drawing.Point(0, 134);
             this.btnDash.Name = "btnDash";
             this.btnDash.Size = new System.Drawing.Size(191, 45);
             this.btnDash.TabIndex = 2;

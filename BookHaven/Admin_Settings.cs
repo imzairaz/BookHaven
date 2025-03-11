@@ -70,5 +70,12 @@ namespace BookHaven
         {
             Application.Exit();
         }
+
+        private void btnBookOrder_Click(object sender, EventArgs e)
+        {
+            Admin_Restock Obj = new Admin_Restock();
+            Obj.Show();
+            this.Hide();
+        }
     }
 }
