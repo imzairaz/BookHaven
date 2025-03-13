@@ -18,7 +18,7 @@ namespace BookHaven
             InitializeComponent();
         }
 
-        SqlConnection Con = new SqlConnection(@"Data Source=Zai\SQLEXPRESS;Initial Catalog=BookHeaven;Integrated Security=True");
+        SqlConnection Con = DatabaseHelper.GetConnection();
 
         private void Login_Load(object sender, EventArgs e)
         {
@@ -32,14 +32,13 @@ namespace BookHaven
 
         private bool ValidateLogin(string username, string password, string role)
         {
-            // Assuming a connection to SQL Server (you would need to configure your connection string)
             string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password AND Role = @Role";
 
-            using (SqlConnection conn = new SqlConnection(@"Data Source=Zai\SQLEXPRESS;Initial Catalog=BookHeaven;Integrated Security=True"))
+            using (SqlConnection conn = DatabaseHelper.GetConnection()) // Use centralized connection
+            using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Parameters.AddWithValue("@Password", password);  // In a real app, don't store plain text passwords!
+                cmd.Parameters.AddWithValue("@Password", password);  // TO DO: Replace with hashed password storage
                 cmd.Parameters.AddWithValue("@Role", role);
 
                 try
@@ -50,11 +49,12 @@ namespace BookHaven
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Database Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
-            }
+            } // Connection automatically closes here
         }
+
 
         private void btnLogin_Click(object sender, EventArgs e)
         {

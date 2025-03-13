@@ -677,7 +677,7 @@ namespace BookHaven
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(105, 36);
             this.btnAdd.TabIndex = 29;
-            this.btnAdd.Text = "Save";
+            this.btnAdd.Text = "Add";
             this.btnAdd.TextOffset = new System.Drawing.Point(7, -1);
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 

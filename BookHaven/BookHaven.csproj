@@ -124,6 +124,7 @@
     <Compile Include="Admin_RestockOLD1.Designer.cs">
       <DependentUpon>Admin_RestockOLD1.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseHelper.cs" />
     <Compile Include="Loading.cs">
       <SubType>Form</SubType>
     </Compile>
