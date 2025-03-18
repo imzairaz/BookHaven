@@ -62,14 +62,14 @@ namespace BookHaven
             string password = txtPassword.Text;
             string role = cmbRole.SelectedItem.ToString();
 
-            // Simple validation check
+            // Validation check
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Please enter both username and password.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Attempt to validate the login (using your database)
+            // validate the login (using database)
             bool isValid = ValidateLogin(username, password, role);
 
             if (isValid)

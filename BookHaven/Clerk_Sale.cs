@@ -187,10 +187,8 @@ namespace BookHaven
             // Calculate the total price after discount
             decimal totalPrice = (bookPrice * quantity) - discountAmount;
 
-            // Ensure you are also adding the BookID to the bill (assuming it exists in dgvBook)
-            int bookId = Convert.ToInt32(dgvBook.SelectedRows[0].Cells["BookID"].Value);  // Access the BookID column
+            int bookId = Convert.ToInt32(dgvBook.SelectedRows[0].Cells["BookID"].Value);
 
-            // Add the row to the dgvBill DataGridView
             dgvBill.Rows.Add(bookId, bookTitle, bookPrice, quantity, discountPercent.ToString("F2") + "%", totalPrice); // Add discountPercent as string with '%' symbol
 
             // Update the total amount

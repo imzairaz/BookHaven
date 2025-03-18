@@ -69,7 +69,7 @@ namespace BookHaven
             this.cmbDeliveryMode = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dgvOrderStatus = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnSaveStatus = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbxMain)).BeginInit();
             this.panelTop.SuspendLayout();
@@ -106,7 +106,7 @@ namespace BookHaven
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogout.Location = new System.Drawing.Point(0, 555);
+            this.btnLogout.Location = new System.Drawing.Point(-1, 628);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(191, 45);
             this.btnLogout.TabIndex = 9;
@@ -521,6 +521,9 @@ namespace BookHaven
             this.cmbOrderStatus.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cmbOrderStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbOrderStatus.ItemHeight = 30;
+            this.cmbOrderStatus.Items.AddRange(new object[] {
+            "Completed",
+            "Cancelled"});
             this.cmbOrderStatus.Location = new System.Drawing.Point(743, 469);
             this.cmbOrderStatus.Name = "cmbOrderStatus";
             this.cmbOrderStatus.Size = new System.Drawing.Size(200, 36);
@@ -683,33 +686,33 @@ namespace BookHaven
             this.label4.TabIndex = 59;
             this.label4.Text = "Order Status";
             // 
-            // btnSave
+            // btnSaveStatus
             // 
-            this.btnSave.Animated = true;
-            this.btnSave.AnimatedGIF = true;
-            this.btnSave.AutoRoundedCorners = true;
-            this.btnSave.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSave.BorderRadius = 16;
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSave.FillColor2 = System.Drawing.Color.Teal;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSave.ImageOffset = new System.Drawing.Point(5, 0);
-            this.btnSave.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnSave.Location = new System.Drawing.Point(743, 511);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(128, 34);
-            this.btnSave.TabIndex = 71;
-            this.btnSave.Text = "Save";
-            this.btnSave.TextOffset = new System.Drawing.Point(7, -1);
-            this.btnSave.Click += new System.EventHandler(this.btnClearForm_Click);
+            this.btnSaveStatus.Animated = true;
+            this.btnSaveStatus.AnimatedGIF = true;
+            this.btnSaveStatus.AutoRoundedCorners = true;
+            this.btnSaveStatus.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSaveStatus.BorderRadius = 16;
+            this.btnSaveStatus.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveStatus.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveStatus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSaveStatus.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSaveStatus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSaveStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSaveStatus.FillColor2 = System.Drawing.Color.Teal;
+            this.btnSaveStatus.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveStatus.ForeColor = System.Drawing.Color.White;
+            this.btnSaveStatus.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveStatus.Image")));
+            this.btnSaveStatus.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSaveStatus.ImageOffset = new System.Drawing.Point(5, 0);
+            this.btnSaveStatus.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnSaveStatus.Location = new System.Drawing.Point(743, 511);
+            this.btnSaveStatus.Name = "btnSaveStatus";
+            this.btnSaveStatus.Size = new System.Drawing.Size(128, 34);
+            this.btnSaveStatus.TabIndex = 71;
+            this.btnSaveStatus.Text = "Save";
+            this.btnSaveStatus.TextOffset = new System.Drawing.Point(7, -1);
+            this.btnSaveStatus.Click += new System.EventHandler(this.btnSaveStatus_Click);
             // 
             // Clerk_Order
             // 
@@ -722,7 +725,7 @@ namespace BookHaven
             this.Controls.Add(this.cmbCustomers);
             this.Controls.Add(this.dgvOrderStatus);
             this.Controls.Add(this.dgvOrderDetails);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnSaveStatus);
             this.Controls.Add(this.btnClearForm);
             this.Controls.Add(this.btnSaveOrder);
             this.Controls.Add(this.btnAddBook);
@@ -790,6 +793,6 @@ namespace BookHaven
         private Guna.UI2.WinForms.Guna2ComboBox cmbDeliveryMode;
         private Guna.UI2.WinForms.Guna2DataGridView dgvOrderStatus;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2GradientButton btnSave;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSaveStatus;
     }
 }

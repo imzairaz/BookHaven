@@ -25,6 +25,14 @@ namespace BookHaven
             dgvOrderDetails.Columns.Add("Quantity", "Quantity");
             dgvOrderDetails.Columns.Add("Price", "Price");
             dgvOrderDetails.Columns.Add("Total", "Total");
+            dgvOrderDetails.Columns.Add("DeliveryMethod", "Delivery Method");
+        }
+
+        private void LoadDeliveryMode()
+        {
+            cmbDeliveryMode.Items.Add("Pickup");
+            cmbDeliveryMode.Items.Add("Delivery");
+            cmbDeliveryMode.SelectedIndex = 0;  // Default to 'Pickup' or 'Delivery'
         }
 
         public Clerk_Order()
@@ -34,6 +42,31 @@ namespace BookHaven
             InitializeGridViews();
             LoadCustomers();
             LoadOrderStatus();
+            LoadDeliveryMode();  // Add this method call to load delivery modes
+        }
+
+        private void LoadOrderStatus()
+        {
+            string query = @"SELECT 
+                        c.Name AS CustomerName, 
+                        b.Title AS BookName, 
+                        od.Quantity, 
+                        od.Price, 
+                        o.DeliveryMethod, 
+                        o.Status
+                     FROM Orders o
+                     INNER JOIN OrderDetails od ON o.OrderID = od.OrderID
+                     INNER JOIN Books b ON od.BookID = b.BookID
+                     INNER JOIN Customers c ON o.CustomerID = c.CustomerID
+                     WHERE o.Status = 'Pending'";
+
+            using (SqlConnection con = DatabaseHelper.GetConnection())
+            {
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvOrderStatus.DataSource = dt;
+            }
         }
 
         private void LoadCustomers()
@@ -45,24 +78,20 @@ namespace BookHaven
 
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
-                cmbCustomers.Items.Clear();
 
-                while (reader.Read())
-                {
-                    cmbCustomers.Items.Add(new { Text = reader["Name"].ToString(), Value = reader["CustomerID"].ToString() });
-                }
+                // Create a DataTable to hold the customer data
+                DataTable dtCustomers = new DataTable();
+                dtCustomers.Load(reader);
+
+                // Bind the DataTable to the ComboBox
+                cmbCustomers.DataSource = dtCustomers;
+                cmbCustomers.DisplayMember = "Name";   // Display the customer's name
+                cmbCustomers.ValueMember = "CustomerID"; // Use the CustomerID as the value
 
                 con.Close();
             }
         }
 
-        private void LoadOrderStatus()
-        {
-            cmbOrderStatus.Items.Add("Pending");
-            cmbOrderStatus.Items.Add("Completed");
-            cmbOrderStatus.Items.Add("Cancelled");
-            cmbOrderStatus.SelectedIndex = 0;  // Default to 'Pending'
-        }
 
         private void btnSearchBooks_Click(object sender, EventArgs e)
         {
@@ -87,7 +116,6 @@ namespace BookHaven
             }
         }
 
-
         private void btnAddBook_Click(object sender, EventArgs e)
         {
             if (dgvSearchResults.SelectedRows.Count > 0)
@@ -96,17 +124,17 @@ namespace BookHaven
                 int bookID = (int)selectedRow.Cells["BookID"].Value;
                 string bookTitle = selectedRow.Cells["Title"].Value.ToString();
                 decimal bookPrice = (decimal)selectedRow.Cells["Price"].Value;
+                int quantity = Convert.ToInt32(txtQuantity.Text);
+                string DeliveryMethod = cmbDeliveryMode.SelectedItem.ToString();
 
-                // Ensure valid quantity is entered
-                if (int.TryParse(txtQuantity.Text, out int quantity) && quantity > 0)
+                if (quantity > 0)
                 {
                     // Add the selected book to the order details DataGridView
-                    decimal totalPrice = quantity * bookPrice;
-                    dgvOrderDetails.Rows.Add(bookID, bookTitle, quantity, bookPrice, totalPrice);
+                    dgvOrderDetails.Rows.Add(bookID, bookTitle, quantity, bookPrice, quantity * bookPrice, DeliveryMethod);
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a valid quantity greater than 0.");
+                    MessageBox.Show("Please enter a valid quantity.");
                 }
             }
             else
@@ -115,10 +143,6 @@ namespace BookHaven
             }
         }
 
-
-
-
-
         private void btnSaveOrder_Click(object sender, EventArgs e)
         {
             if (cmbCustomers.SelectedItem == null || dgvOrderDetails.Rows.Count == 0)
@@ -126,10 +150,12 @@ namespace BookHaven
                 MessageBox.Show("Please select a customer and add books to the order.");
                 return;
             }
+            DataRowView selectedRow = (DataRowView)cmbCustomers.SelectedItem;
 
             var selectedCustomer = (dynamic)cmbCustomers.SelectedItem;
-            int customerID = Convert.ToInt32(selectedCustomer.Value);
-            string orderStatus = cmbOrderStatus.SelectedItem.ToString();
+            int customerID = Convert.ToInt32(selectedRow["CustomerID"]);
+            string orderStatus = "Pending";  // Default status
+            string DeliveryMethod = cmbDeliveryMode.SelectedItem.ToString();  // Get selected delivery mode
 
             decimal totalAmount = 0;
             foreach (DataGridViewRow row in dgvOrderDetails.Rows)
@@ -146,12 +172,13 @@ namespace BookHaven
                     con.Open();  // Open the connection explicitly before starting the transaction
                     transaction = con.BeginTransaction();  // Start the transaction after opening the connection
 
-                    // Insert order query
-                    string orderQuery = "INSERT INTO Orders (CustomerID, OrderDate, Status) OUTPUT INSERTED.OrderID VALUES (@CustomerID, @OrderDate, @Status)";
+                    // Insert order query with DeliveryMode
+                    string orderQuery = "INSERT INTO Orders (CustomerID, OrderDate, Status, DeliveryMethod) OUTPUT INSERTED.OrderID VALUES (@CustomerID, @OrderDate, @Status, @DeliveryMethod)";
                     SqlCommand cmd = new SqlCommand(orderQuery, con, transaction);
                     cmd.Parameters.AddWithValue("@CustomerID", customerID);
                     cmd.Parameters.AddWithValue("@OrderDate", DateTime.Now);
                     cmd.Parameters.AddWithValue("@Status", orderStatus);
+                    cmd.Parameters.AddWithValue("@DeliveryMethod", DeliveryMethod);  // Add DeliveryMode to the query
 
                     int orderID = (int)cmd.ExecuteScalar();
 
@@ -179,6 +206,9 @@ namespace BookHaven
                     // Commit the transaction
                     transaction.Commit();
                     MessageBox.Show("Order saved successfully!");
+
+                    // Refresh the order list in dgvOrderStatus
+                    LoadOrderStatus();
                     ClearForm();
                 }
                 catch (Exception ex)
@@ -190,9 +220,6 @@ namespace BookHaven
             }
         }
 
-
-
-
         private void ClearForm()
         {
             cmbCustomers.SelectedIndex = -1;
@@ -201,11 +228,14 @@ namespace BookHaven
             txtSearchBooks.Clear();
         }
 
-
-
         private void cmbOrderStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             // You can add custom behavior for order status changes if needed
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void btnClearForm_Click(object sender, EventArgs e)
@@ -213,9 +243,33 @@ namespace BookHaven
             ClearForm();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnSaveStatus_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (dgvOrderStatus.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvOrderStatus.SelectedRows[0];
+                int orderID = (int)selectedRow.Cells["OrderID"].Value;
+                string newStatus = cmbOrderStatus.SelectedItem.ToString();
+
+                string updateQuery = "UPDATE Orders SET Status = @Status WHERE OrderID = @OrderID";
+                using (SqlConnection con = DatabaseHelper.GetConnection())
+                {
+                    SqlCommand cmd = new SqlCommand(updateQuery, con);
+                    cmd.Parameters.AddWithValue("@Status", newStatus);
+                    cmd.Parameters.AddWithValue("@OrderID", orderID);
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+
+                // Reload the order status after updating
+                LoadOrderStatus();
+            }
+            else
+            {
+                MessageBox.Show("Please select an order to update its status.");
+            }
         }
     }
 }

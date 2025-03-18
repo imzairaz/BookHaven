@@ -16,7 +16,7 @@ namespace BookHaven
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Clerk_Order());
+            Application.Run(new Loading());
         }
     }
 }
