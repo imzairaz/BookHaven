@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_Cus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Cus.Designer.cs">
+      <DependentUpon>Admin_Cus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Dash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,12 +100,6 @@
     <Compile Include="Admin_Clerk.Designer.cs">
       <DependentUpon>Admin_Clerk.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clerk_Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Clerk_Home.Designer.cs">
-      <DependentUpon>Clerk_Home.cs</DependentUpon>
-    </Compile>
     <Compile Include="Clerk_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,12 +117,6 @@
     </Compile>
     <Compile Include="Clerk_Sale.Designer.cs">
       <DependentUpon>Clerk_Sale.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_RestockOLD1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin_RestockOLD1.Designer.cs">
-      <DependentUpon>Admin_RestockOLD1.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseHelper.cs" />
     <Compile Include="Loading.cs">
@@ -151,18 +145,15 @@
     <Compile Include="Admin_Books.Designer.cs">
       <DependentUpon>Admin_Books.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_RestockOLD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin_RestockOLD.Designer.cs">
-      <DependentUpon>Admin_RestockOLD.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin_Restock.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin_Restock.Designer.cs">
       <DependentUpon>Admin_Restock.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin_Cus.resx">
+      <DependentUpon>Admin_Cus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_Dash.resx">
       <DependentUpon>Admin_Dash.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,9 +169,6 @@
     <EmbeddedResource Include="Admin_Clerk.resx">
       <DependentUpon>Admin_Clerk.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clerk_Home.resx">
-      <DependentUpon>Clerk_Home.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Clerk_Customer.resx">
       <DependentUpon>Clerk_Customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,9 +177,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clerk_Sale.resx">
       <DependentUpon>Clerk_Sale.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Admin_RestockOLD1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
@@ -214,9 +199,6 @@
     <EmbeddedResource Include="Admin_Books.resx">
       <DependentUpon>Admin_Books.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin_RestockOLD.resx">
-      <DependentUpon>Admin_RestockOLD.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin_Restock.resx">
       <DependentUpon>Admin_Restock.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +217,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="stack-of-books.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -241,5 +241,12 @@ namespace BookHaven
             Obj.Show();
             this.Hide();
         }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            Admin_Cus Obj = new Admin_Cus();
+            Obj.Show();
+            this.Hide();
+        }
     }
 }

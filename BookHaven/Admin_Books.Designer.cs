@@ -29,15 +29,14 @@ namespace BookHaven
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Books));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Books));
             this.panelSide = new Guna.UI2.WinForms.Guna2Panel();
             this.btnBookOrder = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnReport = new Guna.UI2.WinForms.Guna2Button();
             this.btnInventory = new Guna.UI2.WinForms.Guna2Button();
             this.btnSupplier = new Guna.UI2.WinForms.Guna2Button();
@@ -69,6 +68,7 @@ namespace BookHaven
             this.lblGenre = new System.Windows.Forms.Label();
             this.lblAuthor = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.btnCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.panelSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbxMain)).BeginInit();
             this.panelTop.SuspendLayout();
@@ -79,9 +79,9 @@ namespace BookHaven
             // panelSide
             // 
             this.panelSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelSide.Controls.Add(this.btnCustomer);
             this.panelSide.Controls.Add(this.btnBookOrder);
             this.panelSide.Controls.Add(this.btnLogout);
-            this.panelSide.Controls.Add(this.btnSettings);
             this.panelSide.Controls.Add(this.btnReport);
             this.panelSide.Controls.Add(this.btnInventory);
             this.panelSide.Controls.Add(this.btnSupplier);
@@ -109,7 +109,7 @@ namespace BookHaven
             this.btnBookOrder.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnBookOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnBookOrder.Image")));
             this.btnBookOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBookOrder.Location = new System.Drawing.Point(0, 326);
+            this.btnBookOrder.Location = new System.Drawing.Point(0, 374);
             this.btnBookOrder.Name = "btnBookOrder";
             this.btnBookOrder.Size = new System.Drawing.Size(191, 45);
             this.btnBookOrder.TabIndex = 9;
@@ -142,30 +142,6 @@ namespace BookHaven
             this.btnLogout.UseTransparentBackground = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnSettings
-            // 
-            this.btnSettings.Animated = true;
-            this.btnSettings.BackColor = System.Drawing.Color.Transparent;
-            this.btnSettings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSettings.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSettings.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSettings.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSettings.Font = new System.Drawing.Font("Helvetica", 11F, System.Drawing.FontStyle.Bold);
-            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnSettings.HoverState.FillColor = System.Drawing.Color.Teal;
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSettings.Location = new System.Drawing.Point(0, 422);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(191, 45);
-            this.btnSettings.TabIndex = 7;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSettings.TextOffset = new System.Drawing.Point(15, 0);
-            this.btnSettings.UseTransparentBackground = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
             // btnReport
             // 
             this.btnReport.Animated = true;
@@ -180,7 +156,7 @@ namespace BookHaven
             this.btnReport.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
             this.btnReport.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnReport.Location = new System.Drawing.Point(0, 374);
+            this.btnReport.Location = new System.Drawing.Point(0, 422);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(191, 45);
             this.btnReport.TabIndex = 6;
@@ -204,7 +180,7 @@ namespace BookHaven
             this.btnInventory.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
             this.btnInventory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnInventory.Location = new System.Drawing.Point(0, 278);
+            this.btnInventory.Location = new System.Drawing.Point(0, 326);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(191, 45);
             this.btnInventory.TabIndex = 5;
@@ -228,7 +204,7 @@ namespace BookHaven
             this.btnSupplier.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnSupplier.Image = ((System.Drawing.Image)(resources.GetObject("btnSupplier.Image")));
             this.btnSupplier.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSupplier.Location = new System.Drawing.Point(0, 230);
+            this.btnSupplier.Location = new System.Drawing.Point(0, 278);
             this.btnSupplier.Name = "btnSupplier";
             this.btnSupplier.Size = new System.Drawing.Size(191, 45);
             this.btnSupplier.TabIndex = 4;
@@ -786,6 +762,30 @@ namespace BookHaven
             this.lblTitle.TabIndex = 9;
             this.lblTitle.Text = "Name";
             // 
+            // btnCustomer
+            // 
+            this.btnCustomer.Animated = true;
+            this.btnCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.btnCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCustomer.Font = new System.Drawing.Font("Helvetica", 11F, System.Drawing.FontStyle.Bold);
+            this.btnCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCustomer.HoverState.FillColor = System.Drawing.Color.Teal;
+            this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
+            this.btnCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 230);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(191, 45);
+            this.btnCustomer.TabIndex = 12;
+            this.btnCustomer.Text = "Customers";
+            this.btnCustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCustomer.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnCustomer.UseTransparentBackground = true;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            // 
             // Admin_Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -820,7 +820,6 @@ namespace BookHaven
         private Guna.UI2.WinForms.Guna2Button btnDash;
         private Guna.UI2.WinForms.Guna2Button btnSupplier;
         private Guna.UI2.WinForms.Guna2Button btnClerk;
-        private Guna.UI2.WinForms.Guna2Button btnSettings;
         private Guna.UI2.WinForms.Guna2Button btnReport;
         private Guna.UI2.WinForms.Guna2Button btnInventory;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
@@ -849,5 +848,6 @@ namespace BookHaven
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2Button btnBookOrder;
+        private Guna.UI2.WinForms.Guna2Button btnCustomer;
     }
 }

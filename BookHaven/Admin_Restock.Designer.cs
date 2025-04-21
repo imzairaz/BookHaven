@@ -30,9 +30,9 @@ namespace BookHaven
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Restock));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnCanceled = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblTopTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -41,7 +41,6 @@ namespace BookHaven
             this.btnBookOrder = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.panelSide = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnReport = new Guna.UI2.WinForms.Guna2Button();
             this.btnInventory = new Guna.UI2.WinForms.Guna2Button();
             this.btnSupplier = new Guna.UI2.WinForms.Guna2Button();
@@ -58,6 +57,7 @@ namespace BookHaven
             this.label1 = new System.Windows.Forms.Label();
             this.lblAuthor = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.btnCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.panelTop.SuspendLayout();
             this.panelSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbxMain)).BeginInit();
@@ -178,7 +178,7 @@ namespace BookHaven
             this.btnBookOrder.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnBookOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnBookOrder.Image")));
             this.btnBookOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBookOrder.Location = new System.Drawing.Point(0, 326);
+            this.btnBookOrder.Location = new System.Drawing.Point(0, 374);
             this.btnBookOrder.Name = "btnBookOrder";
             this.btnBookOrder.Size = new System.Drawing.Size(191, 45);
             this.btnBookOrder.TabIndex = 9;
@@ -214,9 +214,9 @@ namespace BookHaven
             // panelSide
             // 
             this.panelSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelSide.Controls.Add(this.btnCustomer);
             this.panelSide.Controls.Add(this.btnBookOrder);
             this.panelSide.Controls.Add(this.btnLogout);
-            this.panelSide.Controls.Add(this.btnSettings);
             this.panelSide.Controls.Add(this.btnReport);
             this.panelSide.Controls.Add(this.btnInventory);
             this.panelSide.Controls.Add(this.btnSupplier);
@@ -229,30 +229,6 @@ namespace BookHaven
             this.panelSide.Name = "panelSide";
             this.panelSide.Size = new System.Drawing.Size(191, 600);
             this.panelSide.TabIndex = 61;
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.Animated = true;
-            this.btnSettings.BackColor = System.Drawing.Color.Transparent;
-            this.btnSettings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSettings.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSettings.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSettings.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSettings.Font = new System.Drawing.Font("Helvetica", 11F, System.Drawing.FontStyle.Bold);
-            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnSettings.HoverState.FillColor = System.Drawing.Color.Teal;
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSettings.Location = new System.Drawing.Point(0, 422);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(191, 45);
-            this.btnSettings.TabIndex = 7;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSettings.TextOffset = new System.Drawing.Point(15, 0);
-            this.btnSettings.UseTransparentBackground = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnReport
             // 
@@ -268,7 +244,7 @@ namespace BookHaven
             this.btnReport.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
             this.btnReport.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnReport.Location = new System.Drawing.Point(0, 374);
+            this.btnReport.Location = new System.Drawing.Point(0, 422);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(191, 45);
             this.btnReport.TabIndex = 6;
@@ -292,7 +268,7 @@ namespace BookHaven
             this.btnInventory.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
             this.btnInventory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnInventory.Location = new System.Drawing.Point(0, 278);
+            this.btnInventory.Location = new System.Drawing.Point(0, 326);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(191, 45);
             this.btnInventory.TabIndex = 5;
@@ -316,7 +292,7 @@ namespace BookHaven
             this.btnSupplier.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnSupplier.Image = ((System.Drawing.Image)(resources.GetObject("btnSupplier.Image")));
             this.btnSupplier.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSupplier.Location = new System.Drawing.Point(0, 230);
+            this.btnSupplier.Location = new System.Drawing.Point(0, 278);
             this.btnSupplier.Name = "btnSupplier";
             this.btnSupplier.Size = new System.Drawing.Size(191, 45);
             this.btnSupplier.TabIndex = 4;
@@ -400,26 +376,26 @@ namespace BookHaven
             // 
             // dgvOrders
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.dgvOrders.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvOrders.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvOrders.ColumnHeadersHeight = 30;
             this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOrders.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOrders.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvOrders.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvOrders.Location = new System.Drawing.Point(191, 250);
             this.dgvOrders.Name = "dgvOrders";
@@ -565,6 +541,30 @@ namespace BookHaven
             this.lblTitle.TabIndex = 52;
             this.lblTitle.Text = "Book";
             // 
+            // btnCustomer
+            // 
+            this.btnCustomer.Animated = true;
+            this.btnCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.btnCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCustomer.Font = new System.Drawing.Font("Helvetica", 11F, System.Drawing.FontStyle.Bold);
+            this.btnCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCustomer.HoverState.FillColor = System.Drawing.Color.Teal;
+            this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
+            this.btnCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 230);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(191, 45);
+            this.btnCustomer.TabIndex = 12;
+            this.btnCustomer.Text = "Customers";
+            this.btnCustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCustomer.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnCustomer.UseTransparentBackground = true;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            // 
             // Admin_Restock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -607,7 +607,6 @@ namespace BookHaven
         private Guna.UI2.WinForms.Guna2Button btnBookOrder;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Panel panelSide;
-        private Guna.UI2.WinForms.Guna2Button btnSettings;
         private Guna.UI2.WinForms.Guna2Button btnReport;
         private Guna.UI2.WinForms.Guna2Button btnInventory;
         private Guna.UI2.WinForms.Guna2Button btnSupplier;
@@ -624,5 +623,6 @@ namespace BookHaven
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblAuthor;
         private System.Windows.Forms.Label lblTitle;
+        private Guna.UI2.WinForms.Guna2Button btnCustomer;
     }
 }

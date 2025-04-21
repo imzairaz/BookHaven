@@ -48,6 +48,7 @@ namespace BookHaven
         private void LoadOrderStatus()
         {
             string query = @"SELECT 
+                        o.OrderID,
                         c.Name AS CustomerName, 
                         b.Title AS BookName, 
                         od.Quantity, 
@@ -248,7 +249,21 @@ namespace BookHaven
             if (dgvOrderStatus.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dgvOrderStatus.SelectedRows[0];
+
+                if (selectedRow.Cells["OrderID"].Value == null)
+                {
+                    MessageBox.Show("Selected order does not have a valid Order ID.");
+                    return;
+                }
+
                 int orderID = (int)selectedRow.Cells["OrderID"].Value;
+
+                if (cmbOrderStatus.SelectedItem == null)
+                {
+                    MessageBox.Show("Please select a status to update.");
+                    return;
+                }
+
                 string newStatus = cmbOrderStatus.SelectedItem.ToString();
 
                 string updateQuery = "UPDATE Orders SET Status = @Status WHERE OrderID = @OrderID";
@@ -265,11 +280,42 @@ namespace BookHaven
 
                 // Reload the order status after updating
                 LoadOrderStatus();
+
+                // ✅ Show special message if status is 'Completed'
+                if (newStatus == "Completed")
+                {
+                    MessageBox.Show("Order is Completed ✅");
+                }
+                else
+                {
+                    MessageBox.Show("Order status updated successfully.");
+                }
             }
             else
             {
                 MessageBox.Show("Please select an order to update its status.");
             }
+        }
+
+        private void btnSales_Click(object sender, EventArgs e)
+        {
+            Clerk_Sale Obj = new Clerk_Sale();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            Clerk_Order Obj = new Clerk_Order();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            Clerk_Customer Obj = new Clerk_Customer();
+            Obj.Show();
+            this.Hide();
         }
     }
 }
