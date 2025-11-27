@@ -1,131 +1,204 @@
-# BookHaven - Bookstore Management System
+# 📚 BookHaven – Bookstore Management System  
+*A modern Windows Forms application for managing bookstore operations.*
 
-BookHaven is a Windows Forms-based application designed to streamline inventory management, sales tracking, and customer management for a mid-sized bookstore. This system helps manage books, track customer orders, handle inventory, and generate sales reports.
+<div align="center">
 
-## Features
+🌟 **Admin Dashboard** • 🛒 Sales System • 📦 Inventory • 👥 Customers • 🧾 Reports • 🚚 Orders • 🏭 Suppliers  
 
-- **User Login System**: Secure login with role-based access control (Admin and Sales Clerk).
-- **Book Inventory Management**: Add, update, delete, and search books in the inventory.
-- **Customer Management**: Add, update, delete, and search customer profiles.
-- **Sales Transactions**: Process sales, calculate totals, apply discounts, and generate receipts.
-- **Order Management**: Manage customer orders for pick-up or delivery.
-- **Supplier Management**: Manage supplier details and generate restock orders.
-- **Admin Dashboard**: Overview of total sales, inventory levels, customer activity, and staff performance.
-- **Reporting and Analytics**: Generate sales reports, track best-selling books, and monitor inventory status.
-- **Security and Data Protection**: Implemented role-based access control and encryption for sensitive data.
+</div>
 
-## Requirements
+---
 
-### Hardware
+## 🚀 Tech Stack
 
-- **Operating System**: Windows 10/11
-- **Processor**: Intel Core i3 or higher
-- **RAM**: 4GB minimum (8GB recommended)
-- **Disk Space**: At least 10GB free
+<div align="center">
 
-### Software
+![C#](https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
+![.NET Framework](https://img.shields.io/badge/.NET%20Framework-4.7.2-blue?style=for-the-badge&logo=dotnet)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-Database-red?style=for-the-badge&logo=microsoft-sql-server)
+![Windows Forms](https://img.shields.io/badge/Windows%20Forms-UI-lightgrey?style=for-the-badge&logo=windows)
 
-- **.NET Framework**: 4.7.2 or higher
-- **Visual Studio 2017 or later**
-- **SQL Server (SSMS)**
+</div>
 
-## Installation
+---
 
-### Clone the Repository
+# ✨ Overview
 
-Clone the repository to your local machine:
+BookHaven is a complete Windows Forms application designed to simplify:
 
+- 📦 Inventory Management  
+- 🛒 Billing & Sales  
+- 👥 Customer Records  
+- 🚚 Order Tracking  
+- 🏭 Supplier Restocking  
+- 📊 Reporting & Analytics  
+- 🔐 Secure Role-based Login  
+
+It is ideal for bookstore staff and administrators who want a clean and efficient desktop system.
+
+---
+
+# 🖼️ Screenshots (Optional)
+
+
+
+
+---
+
+# 🔐 User Roles
+
+### 👑 Admin
+- Full System Access  
+- Manage Inventory, Customers, Suppliers, Orders  
+- View Analytics & Reports  
+- Manage Staff Accounts  
+
+### 👨‍💼 Sales Clerk
+- Process Sales  
+- Search Inventory  
+- Manage Customers  
+- Create Customer Orders  
+
+---
+
+# ⚙️ System Requirements
+
+### 🖥 Hardware
+- Windows 10 or 11  
+- Intel i3 or higher  
+- 4GB RAM minimum (8GB recommended)  
+- 10GB free disk space  
+
+### 🧩 Software
+- .NET Framework 4.7.2 or later  
+- Visual Studio 2017 or later  
+- SQL Server + SSMS  
+
+---
+
+# 📥 Installation Guide
+
+## 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/imzairaz/BookHaven.git
 
-Open in Visual Studio
+2️⃣ Open with Visual Studio
 
-    Open Visual Studio 2017 or later.
+    Open BookHaven.sln
 
-    Click on File > Open > Project/Solution.
+    Build and run using F5
 
-    Navigate to the cloned repository and open the BookHaven.sln file.
+3️⃣ Database Setup
 
-Setting Up the Database
+    Open SQL Server Management Studio (SSMS)
 
-    Open SQL Server Management Studio (SSMS).
+    Run the provided database.sql script
 
-    Execute the provided database.sql script to create the necessary tables in your database.
+    Update your connection string inside DatabaseHelper.cs
 
-    Update the connection string in DatabaseHelper.cs to match your SQL Server setup.
+4️⃣ Run the Application
 
-Run the Application
+    Press F5 in Visual Studio
 
-Press F5 to build and run the application from Visual Studio.
-User Roles
+    Login using Admin or Clerk credentials
 
-    Admin: Full access to manage books, customers, orders, suppliers, and view reports.
+🧭 Application Modules
+🔑 Login System
 
-    Sales Clerk: Limited access to manage sales transactions, view inventory, and manage customers.
+    Secure credential validation
 
-How to Use
-Admin
+    Role-based UI redirection
 
-    Admin Dashboard: View system metrics like total sales and customer activity.
+📚 Inventory Management
 
-    Manage Clerk: Add, update, or delete sales clerk accounts.
+    Add, update, delete books
 
-    Inventory: Add, update, delete, and search books in the inventory.
+    Search by title, author, genre
 
-    Restock: Order books and manage restock statuses.
+👥 Customer Management
 
-    Manage Suppliers: Add, update, or delete suppliers.
+    Add/update customer details
 
-    Reports: Generate and view sales reports.
+    View customer history
 
-Sales Clerk
+🛒 Sales Transaction (POS)
 
-    Sales Transaction: Process sales, calculate totals, and print receipts.
+    Add items to bill
 
-    Customer Management: Add new customers and view existing profiles.
+    Apply discounts
 
-    Order Management: Track and manage customer orders.
+    Print receipts
 
-Documentation
+    Auto-update stock
 
-The repository contains detailed documentation, including:
+🚚 Order Management
 
-    Installation Guide and User Manual
+    Place customer orders
 
-    Solution Description
+    Pick-up / delivery
 
-    Architecture Diagram
+    Update order status
 
-    ER Diagram and UML Diagrams
+🏭 Supplier Management
 
-    Class Details and Methods
+    Add / Update suppliers
 
-Testing
+    Restock books
 
-Several test cases have been implemented to verify the correct functionality of the application, such as:
+    Mark Received / Cancelled
 
-    Successful and unsuccessful login attempts.
+📊 Reports & Analytics
 
-    Adding, updating, and deleting books and customers.
+    Daily, weekly, monthly sales
 
-    Handling sales transactions and generating receipts.
+    Top-selling books
 
-Future Improvements
+    Inventory insights
 
-    Automated Testing: Implement automated tests for database operations.
+🏗️ Architecture
 
-    Enhanced Reporting: Add graphical reports for better insights.
+BookHaven uses a structured multi-layer design:
+🎨 UI Layer
 
-    Cloud Integration: Integrate with cloud services for backup and scalability.
+Windows Forms (WinForms)
+🧠 Business Logic Layer
 
-    Mobile Access: Develop a mobile version of the application for on-the-go access.
+Handles all logic & validation
+🗄 Database Layer
 
-Conclusion
+SQL Server + Stored Queries
+📘 Included Diagrams
 
-This project is a comprehensive bookstore management system developed using Windows Forms. It offers a user-friendly interface for both Admins and Sales Clerks, ensuring efficient business operations for inventory and customer management.
-License
+    🏛 Architecture Diagram
 
-MIT License
+    🗂 ER Diagram
 
+    📐 UML Use Case Diagram
 
-This `README.md` includes an overview of the features, installation steps, usage instructions, and more, based on the details from your document. You can modify the links and paths as per your specific project structure.
+    🧱 Class Diagram
+
+🧪 Test Cases Covered
+
+✔ Login success & failure
+✔ Add/Update/Delete Books
+✔ Restock orders
+✔ Sales & receipt generation
+✔ Customer operations
+✔ Customer order placement
+💡 Future Improvements
+
+    ☁ Cloud Sync
+
+    📈 Advanced Graphical Reporting
+
+    📱 Mobile App Version
+
+    🤖 Automated Testing
+
+📝 Author
+
+👤 Iyoobdeen Mohamed Zairaz (Zai)
+GitHub: @imzairaz
+📄 License
+
+This project is licensed under the MIT License.
