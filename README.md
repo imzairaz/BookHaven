@@ -1,8 +1,3 @@
-Here is the **full premium README in pure Markdown (MD)** — you can copy & paste directly into GitHub with no formatting issues:
-
----
-
-```markdown
 # 📚 BookHaven – Bookstore Management System  
 *A modern Windows Forms application for managing bookstore operations.*
 
@@ -213,16 +208,4 @@ This project is licensed under the **MIT License**.
 
 ---
 
-```
-
----
-
-If you want:
-
-🎨 A **banner image**  
-📦 Badges for commit activity, repo size, contributors  
-🔥 Animated GIF previews  
-🎯 A personal branding section  
-
-Just tell me and I’ll add it!
 ```
