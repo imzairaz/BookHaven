@@ -40,7 +40,7 @@ It is ideal for bookstore staff and administrators who want a clean and efficien
 
 # 🖼️ Screenshots (Optional)
 
-```
+
 
 ![JPEG image](https://github.com/user-attachments/assets/421c44f0-9b49-49d0-8c55-4f997e9f91a3)
 ![JPEG image 2](https://github.com/user-attachments/assets/cbb2e2f1-4ba0-4e95-ae3a-87b5e24836a1)
@@ -56,8 +56,6 @@ It is ideal for bookstore staff and administrators who want a clean and efficien
 
 
 
-
-````
 
 ---
 
