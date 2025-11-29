@@ -1,7 +1,8 @@
+<div align="center">
 # 📚 BookHaven – Bookstore Management System  
 *A modern Windows Forms application for managing bookstore operations.*
 
-<div align="center">
+
 
 🌟 **Admin Dashboard** • 🛒 Sales System • 📦 Inventory • 👥 Customers • 🧾 Reports • 🚚 Orders • 🏭 Suppliers  
 
