@@ -269,7 +269,3 @@ This project is licensed under the **MIT License**.
 ---
 
 ⭐ **If you like this project, please give it a star!** ⭐
-
----
-
-```
