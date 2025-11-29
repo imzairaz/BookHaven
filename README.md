@@ -1,256 +1,145 @@
-# 📚 BookHaven – Bookstore Management System  
-*A modern Windows Forms application for managing bookstore operations.*
+# BookHaven - Bookstore Management System
 
-<div align="center">
+![BookHaven Banner](https://github.com/user-attachments/assets/421c44f0-9b49-49d0-8c55-4f997e9f91a3)
 
-🌟 **Admin Dashboard** • 🛒 Sales System • 📦 Inventory • 👥 Customers • 🧾 Reports • 🚚 Orders • 🏭 Suppliers  
+> A modern Windows Forms desktop application built in **C#** for managing bookstore operations — inventory, sales, customers, suppliers, orders, and analytics.
 
-</div>
+[![.NET](https://img.shields.io/badge/.NET-4.7.2-purple)](https://dotnet.microsoft.com/)
+[![C#](https://img.shields.io/badge/C%23-10.0-blue)](https://learn.microsoft.com/en-us/dotnet/csharp/)
+[![SQL Server](https://img.shields.io/badge/SQL_Server-Express-blue)](https://www.microsoft.com/en-us/sql-server)
+[![Visual Studio](https://img.shields.io/badge/Visual_Studio-2022-green)](https://visualstudio.microsoft.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
----
-
-## 🚀 Tech Stack
-
-<div align="center">
-
-![C#](https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
-![.NET Framework](https://img.shields.io/badge/.NET%20Framework-4.7.2-blue?style=for-the-badge&logo=dotnet)
-![SQL Server](https://img.shields.io/badge/SQL%20Server-Database-red?style=for-the-badge&logo=microsoft-sql-server)
-![Windows Forms](https://img.shields.io/badge/Windows%20Forms-UI-lightgrey?style=for-the-badge&logo=windows)
-
-</div>
+**Course**: CS6004ES – Application Development  
+**Student**: I M Zairaz (E182014)  
+**Module Leader**: Mr. Chamila Karunathilaka  
+**Submitted**: 15th March 2025  
+**London Metropolitan University**
 
 ---
 
-# ✨ Overview
+## Features
 
-BookHaven is a complete Windows Forms application designed to simplify:
-
-- 📦 Inventory Management  
-- 🛒 Billing & Sales  
-- 👥 Customer Records  
-- 🚚 Order Tracking  
-- 🏭 Supplier Restocking  
-- 📊 Reporting & Analytics  
-- 🔐 Secure Role-based Login  
-
-It is ideal for bookstore staff and administrators who want a clean and efficient desktop system.
+- Secure **Role-Based Login** (Admin & Sales Clerk)
+- Full **Book Inventory Management** (Add, Update, Delete, Search)
+- **Customer Management** with Purchase History
+- **Point of Sale (POS)** System with Receipt Generation
+- **Order Management** (In-store Pickup / Delivery)
+- **Supplier & Restock Management**
+- **Admin Dashboard** with Key Metrics
+- **Sales Reports** (Daily, Weekly, Monthly + Best Sellers)
+- Robust **Data Validation** & Exception Handling
 
 ---
 
-# 🖼️ Screenshots (Optional)
+## Screenshots
 
+| Login Screen                          | Admin Dashboard                          |
+|---------------------------------------|------------------------------------------|
+| ![Login](https://github.com/user-attachments/assets/cbb2e2f1-4ba0-4e95-ae3a-87b5e24836a1) | ![Admin Dashboard](https://github.com/user-attachments/assets/c5a6c2ab-9996-4816-b554-602f23abee31) |
 
-## Login Interface
-![JPEG image](https://github.com/user-attachments/assets/421c44f0-9b49-49d0-8c55-4f997e9f91a3)
+| Clerk Interface (Sales View)          | Inventory Management                     |
+|---------------------------------------|------------------------------------------|
+| ![Clerk Interface](https://github.com/user-attachments/assets/ad8a847d-5d9b-4554-a960-9a54f6039858) | ![Inventory](https://github.com/user-attachments/assets/532787b5-fe15-47d1-b317-13eba00af517) |
 
+| Restock Books                         | Manage Suppliers                         |
+|---------------------------------------|------------------------------------------|
+| ![Restock](https://github.com/user-attachments/assets/6948a8d2-5f2d-409a-9e63-6fc359a39e12) | ![Suppliers](https://github.com/user-attachments/assets/7a5a6428-b4b8-467c-a6be-93f3d21d0b1f) |
 
+| Point of Sale (POS)                   | Manage Customers                         |
+|---------------------------------------|------------------------------------------|
+| ![POS](https://github.com/user-attachments/assets/2d844aa0-7cad-4cae-a4e0-a6917dbe0dd2) | ![Customers](https://github.com/user-attachments/assets/a8e27061-0f02-48bc-9779-de73b3442daa) |
 
-## Login
-![JPEG image 2](https://github.com/user-attachments/assets/cbb2e2f1-4ba0-4e95-ae3a-87b5e24836a1)
-
-
-
-## Admin Dashboard
-![JPEG image 3](https://github.com/user-attachments/assets/c5a6c2ab-9996-4816-b554-602f23abee31)
-
-
-
-## Clerk Interface (Admin)
-![JPEG image 4](https://github.com/user-attachments/assets/ad8a847d-5d9b-4554-a960-9a54f6039858)
-
-
-
-## Inventory (Admin)
-![JPEG image 5](https://github.com/user-attachments/assets/532787b5-fe15-47d1-b317-13eba00af517)
-
-
-
-## Restock (Admin)
-![JPEG image 6](https://github.com/user-attachments/assets/6948a8d2-5f2d-409a-9e63-6fc359a39e12)
-
-
-
-## Suppliers (Admin)
-![JPEG image 7](https://github.com/user-attachments/assets/7a5a6428-b4b8-467c-a6be-93f3d21d0b1f)
-
-
-
-## POS
-![JPEG image 8](https://github.com/user-attachments/assets/2d844aa0-7cad-4cae-a4e0-a6917dbe0dd2)
-
-
-
-## Manage Customer (Clerk)
-![JPEG image 9](https://github.com/user-attachments/assets/a8e27061-0f02-48bc-9779-de73b3442daa)
-
-
-
-## Order (Clerk)
-![JPEG image 10](https://github.com/user-attachments/assets/b7ed4e91-3f9b-490e-8eb9-8cf5935c6a77)
-
-
-
-
+| Order Management (Clerk)              |
+|---------------------------------------|
+| ![Order Form](https://github.com/user-attachments/assets/b7ed4e91-3f9b-490e-8eb9-8cf5935c6a77) |
 
 ---
 
-# 🔐 User Roles
+## System Requirements
 
-### 👑 Admin
-- Full System Access  
-- Manage Inventory, Customers, Suppliers, Orders  
-- View Analytics & Reports  
-- Manage Staff Accounts  
+### Hardware
+- Windows 10/11
+- 4GB RAM (8GB recommended)
+- 500MB free disk space
 
-### 👨‍💼 Sales Clerk
-- Process Sales  
-- Search Inventory  
-- Manage Customers  
-- Create Customer Orders  
-
----
-
-# ⚙️ System Requirements
-
-### 🖥 Hardware
-- Windows 10 or 11  
-- Intel i3 or higher  
-- 4GB RAM minimum (8GB recommended)  
-- 10GB free disk space  
-
-### 🧩 Software
-- .NET Framework 4.7.2 or later  
-- Visual Studio 2017 or later  
-- SQL Server + SSMS  
+### Software
+- .NET Framework 4.7.2 or higher
+- Visual Studio 2017+
+- SQL Server 2016+ / SQL Server Express
+- SQL Server Management Studio (SSMS)
 
 ---
 
-# 📥 Installation Guide
+## Installation & Setup
 
-## 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/imzairaz/BookHaven.git
-````
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/BookHaven.git
+   ```
 
-## 2️⃣ Open with Visual Studio
+2. **Open Project**
+   - Launch Visual Studio
+   - Open `BookHaven.sln`
 
-* Open **BookHaven.sln**
-* Build and run using **F5**
+3. **Database Setup**
+   - Open SSMS and run the script in `Database/BookHavenDB.sql`
+   - Or attach the `.mdf` file located in `Database/`
 
-## 3️⃣ Database Setup
+4. **Update Connection String** (if needed)
+   ```csharp
+   Data Source=.\SQLEXPRESS;Initial Catalog=BookHavenDB;Integrated Security=True
+   ```
 
-1. Open **SQL Server Management Studio (SSMS)**
-2. Run the provided `database.sql` script
-3. Update your connection string inside `DatabaseHelper.cs`
+5. **Run the Application**
+   - Press **F5** in Visual Studio
 
-## 4️⃣ Run the Application
-
-* Press **F5** in Visual Studio
-* Login using Admin or Clerk credentials
-
----
-
-# 🧭 Application Modules
-
-### 🔑 Login System
-
-* Secure credential validation
-* Role-based UI redirection
-
-### 📚 Inventory Management
-
-* Add, update, delete books
-* Search by title, author, genre
-
-### 👥 Customer Management
-
-* Add/update customer details
-* View customer history
-
-### 🛒 Sales Transaction (POS)
-
-* Add items to bill
-* Apply discounts
-* Print receipts
-* Auto-update stock
-
-### 🚚 Order Management
-
-* Place customer orders
-* Pick-up / delivery
-* Update order status
-
-### 🏭 Supplier Management
-
-* Add / Update suppliers
-* Restock books
-* Mark Received / Cancelled
-
-### 📊 Reports & Analytics
-
-* Daily, weekly, monthly sales
-* Top-selling books
-* Inventory insights
+Default Login Credentials:
+- **Admin**: Username: `admin` | Password: `admin123`
+- **Clerk**: Username: `clerk` | Password: `clerk123`
 
 ---
 
-# 🏗️ Architecture
-
-BookHaven uses a structured multi-layer design:
-
-### 🎨 **UI Layer**
-
-Windows Forms (WinForms)
-
-### 🧠 **Business Logic Layer**
-
-Handles all logic & validation
-
-### 🗄 **Database Layer**
-
-SQL Server + Stored Queries
-
-### 📘 Included Diagrams
-
-* 🏛 Architecture Diagram
-* 🗂 ER Diagram
-* 📐 UML Use Case Diagram
-* 🧱 Class Diagram
-
----
-
-# 🧪 Test Cases Covered
-
-✔ Login success & failure
-✔ Add/Update/Delete Books
-✔ Restock orders
-✔ Sales & receipt generation
-✔ Customer operations
-✔ Customer order placement
-
----
-
-# 💡 Future Improvements
-
-* ☁ Cloud Sync
-* 📈 Advanced Graphical Reporting
-* 📱 Mobile App Version
-* 🤖 Automated Testing
-
----
-
-# 📝 Author
-
-👤 **Iyoobdeen Mohamed Zairaz (Zai)**
-GitHub: **[@imzairaz](https://github.com/imzairaz)**
-
----
-
-# 📄 License
-
-This project is licensed under the **MIT License**.
-
----
+## Project Structure
 
 ```
+BookHaven/
+├── Forms/              # All Windows Forms
+├── Classes/            # Business logic & models
+├── Database/           # SQL scripts & .mdf file
+├── Reports/            # Crystal Reports (.rpt)
+├── Resources/          # Images & icons
+├── Documentation/      # Full report (AD - Zai.pdf)
+└── BookHaven.sln
+```
+
+---
+
+## Documentation
+
+Detailed documentation including:
+- Installation Guide & User Manual
+- Architecture, ER & UML Diagrams
+- Class Descriptions
+- Personal Reflection
+
+[Download Full Report (PDF)](https://github.com/yourusername/BookHaven/blob/main/Documentation/AD%20-%20Zai.pdf)
+
+---
+
+## Academic Integrity
+
+This project was developed **entirely by I M Zairaz** as part of the CS6004ES coursework. No generative AI was used to write core logic or produce submission content. All code, design, and documentation are original work.
+
+---
+
+## License
+
+This project is licensed under the **MIT License** – feel free to use, modify, and learn from it.
+
+---
+
+**Developed with passion by I M Zairaz**  
+London Metropolitan University | March 2025
+
+⭐ **If you like this project, please give it a star!** ⭐
