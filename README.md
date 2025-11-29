@@ -156,14 +156,14 @@ git clone https://github.com/imzairaz/BookHaven.git
 
 ---
 
-## 💡 Future Improvements
+## Documentation
 
-* ☁ Cloud Sync
-* 📈 Advanced Graphical Reporting
-* 📱 Mobile App Version
-* 🤖 Automated Testing
-
----
+Detailed documentation including:
+- Installation Guide & User Manual
+- Architecture, ER & UML Diagrams
+- Class Descriptions
+- Personal Reflection
+[Download Full Report (PDF)](https://github.com/imzairaz/BookHaven/blob/master/Application%20Development%20-%20Zai.pdf)
 
 ## 📝 Author
 
