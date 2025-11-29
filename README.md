@@ -1,10 +1,7 @@
+# 📚 BookHaven – Bookstore Management System
+*A modern Windows Forms application to streamline bookstore operations.*
 
-# 📚 BookHaven – Bookstore Management System  
-*A modern Windows Forms application for managing bookstore operations.*
-
-
-🌟 **Admin Dashboard** • 🛒 Sales System • 📦 Inventory • 👥 Customers • 🧾 Reports • 🚚 Orders • 🏭 Suppliers  
-
+🌟 **Admin Dashboard** • 🛒 Sales System • 📦 Inventory • 👥 Customers • 🧾 Reports • 🚚 Orders • 🏭 Suppliers
 
 ---
 
@@ -12,91 +9,61 @@
 
 <div align="center">
 
-[![.NET](https://img.shields.io/badge/.NET-4.7.2-purple)](https://dotnet.microsoft.com/)
-[![C#](https://img.shields.io/badge/C%23-10.0-blue)](https://learn.microsoft.com/en-us/dotnet/csharp/)
-[![SQL Server](https://img.shields.io/badge/SQL_Server-Express-blue)](https://www.microsoft.com/en-us/sql-server)
-[![Visual Studio](https://img.shields.io/badge/Visual_Studio-2022-green)](https://visualstudio.microsoft.com/)
+[![.NET](https://img.shields.io/badge/.NET-4.7.2-purple)](https://dotnet.microsoft.com/)  
+[![C#](https://img.shields.io/badge/C%23-10.0-blue)](https://learn.microsoft.com/en-us/dotnet/csharp/)  
+[![SQL Server](https://img.shields.io/badge/SQL_Server-Express-blue)](https://www.microsoft.com/en-us/sql-server)  
+[![Visual Studio](https://img.shields.io/badge/Visual_Studio-2022-green)](https://visualstudio.microsoft.com/)  
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 </div>
 
 ---
 
-# ✨ Features
+## ✨ Features
 
-- Secure **Role-Based Login** (Admin & Sales Clerk)
-- Full **Book Inventory Management** (Add, Update, Delete, Search)
-- **Customer Management** with Purchase History
-- **Point of Sale (POS)** System with Receipt Generation
-- **Order Management** (In-store Pickup / Delivery)
-- **Supplier & Restock Management**
-- **Admin Dashboard** with Key Metrics
-- **Sales Reports** (Daily, Weekly, Monthly + Best Sellers)
-- Robust **Data Validation** & Exception Handling  
+- 🔐 **Secure Role-Based Login** (Admin & Clerk)  
+- 📚 **Book Inventory Management**: Add, Update, Delete, Search  
+- 👥 **Customer Management** with Purchase History  
+- 🛒 **Point of Sale (POS)** with Receipt Generation  
+- 🚚 **Order Management** (In-store Pickup / Delivery)  
+- 🏭 **Supplier & Restock Management**  
+- 📊 **Admin Dashboard** with Key Metrics  
+- 🧾 **Sales Reports**: Daily, Weekly, Monthly + Best Sellers  
+- ✅ Robust **Data Validation** & Exception Handling  
 
-It is ideal for bookstore staff and administrators who want a clean and efficient desktop system.
-
----
-
-# 🖼️ Screenshots
-
-
-## Login Interface
-![JPEG image](https://github.com/user-attachments/assets/421c44f0-9b49-49d0-8c55-4f997e9f91a3)
-
-
-
-## Login
-![JPEG image 2](https://github.com/user-attachments/assets/cbb2e2f1-4ba0-4e95-ae3a-87b5e24836a1)
-
-
-
-## Admin Dashboard
-![JPEG image 3](https://github.com/user-attachments/assets/c5a6c2ab-9996-4816-b554-602f23abee31)
-
-
-
-## Clerk Interface (Admin)
-![JPEG image 4](https://github.com/user-attachments/assets/ad8a847d-5d9b-4554-a960-9a54f6039858)
-
-
-
-## Inventory (Admin)
-![JPEG image 5](https://github.com/user-attachments/assets/532787b5-fe15-47d1-b317-13eba00af517)
-
-
-
-## Restock (Admin)
-![JPEG image 6](https://github.com/user-attachments/assets/6948a8d2-5f2d-409a-9e63-6fc359a39e12)
-
-
-
-## Suppliers (Admin)
-![JPEG image 7](https://github.com/user-attachments/assets/7a5a6428-b4b8-467c-a6be-93f3d21d0b1f)
-
-
-
-## POS
-![JPEG image 8](https://github.com/user-attachments/assets/2d844aa0-7cad-4cae-a4e0-a6917dbe0dd2)
-
-
-
-## Manage Customer (Clerk)
-![JPEG image 9](https://github.com/user-attachments/assets/a8e27061-0f02-48bc-9779-de73b3442daa)
-
-
-
-## Order (Clerk)
-![JPEG image 10](https://github.com/user-attachments/assets/b7ed4e91-3f9b-490e-8eb9-8cf5935c6a77)
-
+Ideal for bookstore staff and administrators seeking a clean and efficient desktop system.
 
 ---
 
+## 🖼 Screenshots
 
-# 🔐 User Roles
+### Login Interface
+![Login](https://github.com/user-attachments/assets/421c44f0-9b49-49d0-8c55-4f997e9f91a3)
+
+### Admin Dashboard
+![Admin Dashboard](https://github.com/user-attachments/assets/c5a6c2ab-9996-4816-b554-602f23abee31)
+
+### Clerk Interface
+![Clerk](https://github.com/user-attachments/assets/ad8a847d-5d9b-4554-a960-9a54f6039858)
+
+### Inventory Management
+![Inventory](https://github.com/user-attachments/assets/532787b5-fe15-47d1-b317-13eba00af517)
+
+### POS System
+![POS](https://github.com/user-attachments/assets/2d844aa0-7cad-4cae-a4e0-a6917dbe0dd2)
+
+### Customer Management
+![Customer](https://github.com/user-attachments/assets/a8e27061-0f02-48bc-9779-de73b3442daa)
+
+### Orders
+![Orders](https://github.com/user-attachments/assets/b7ed4e91-3f9b-490e-8eb9-8cf5935c6a77)
+
+---
+
+## 🔐 User Roles
 
 ### 👑 Admin
-- Full System Access  
+- Full system access  
 - Manage Inventory, Customers, Suppliers, Orders  
 - View Analytics & Reports  
 - Manage Staff Accounts  
@@ -109,142 +76,87 @@ It is ideal for bookstore staff and administrators who want a clean and efficien
 
 ---
 
-# ⚙️ System Requirements
+## ⚙ System Requirements
 
 ### 🖥 Hardware
 - Windows 10 or 11  
 - Intel i3 or higher  
-- 4GB RAM minimum (8GB recommended)  
+- 4GB RAM (8GB recommended)  
 - 10GB free disk space  
 
 ### 🧩 Software
-- .NET Framework 4.7.2 or later  
-- Visual Studio 2017 or later  
+- .NET Framework 4.7.2+  
+- Visual Studio 2017+  
 - SQL Server + SSMS  
 
 ---
 
-# 📥 Installation Guide
+## 📥 Installation Guide
 
-## 1️⃣ Clone the Repository
+### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/imzairaz/BookHaven.git
 ````
 
-## 2️⃣ Open with Visual Studio
+### 2️⃣ Open with Visual Studio
 
-* Open **BookHaven.sln**
+* Open `BookHaven.sln`
 * Build and run using **F5**
 
-## 3️⃣ Database Setup
+### 3️⃣ Database Setup
 
-1. Open **SQL Server Management Studio (SSMS)**
-2. Run the provided `database.sql` script
-3. Update your connection string inside `DatabaseHelper.cs`
+1. Open **SSMS**
+2. Run `database.sql`
+3. Update the connection string in `DatabaseHelper.cs`
 
-## 4️⃣ Run the Application
+### 4️⃣ Run the Application
 
-* Press **F5** in Visual Studio
-* Login using Admin or Clerk credentials
+* Press **F5**
+* Login using default credentials:
 
-## Default Login Credentials:
-- **Admin**: Username: `admin` | Password: `admin123`
-- **Clerk**: Username: `clerk` | Password: `clerk123`
-
----
-
-## Documentation
-
-Detailed documentation including:
-- Installation Guide & User Manual
-- Architecture, ER & UML Diagrams
-- Class Descriptions
-- Personal Reflection
-
-[Download Full Report (PDF)](https://github.com/yourusername/BookHaven/blob/main/Documentation/AD%20-%20Zai.pdf)
----
-
-# 🧭 Application Modules
-
-### 🔑 Login System
-
-* Secure credential validation
-* Role-based UI redirection
-
-### 📚 Inventory Management
-
-* Add, update, delete books
-* Search by title, author, genre
-
-### 👥 Customer Management
-
-* Add/update customer details
-* View customer history
-
-### 🛒 Sales Transaction (POS)
-
-* Add items to bill
-* Apply discounts
-* Print receipts
-* Auto-update stock
-
-### 🚚 Order Management
-
-* Place customer orders
-* Pick-up / delivery
-* Update order status
-
-### 🏭 Supplier Management
-
-* Add / Update suppliers
-* Restock books
-* Mark Received / Cancelled
-
-### 📊 Reports & Analytics
-
-* Daily, weekly, monthly sales
-* Top-selling books
-* Inventory insights
+| Role  | Username | Password |
+| ----- | -------- | -------- |
+| Admin | admin    | admin123 |
+| Clerk | clerk    | clerk123 |
 
 ---
 
-# 🏗️ Architecture
+## 🧭 Application Modules
 
-BookHaven uses a structured multi-layer design:
-
-### 🎨 **UI Layer**
-
-Windows Forms (WinForms)
-
-### 🧠 **Business Logic Layer**
-
-Handles all logic & validation
-
-### 🗄 **Database Layer**
-
-SQL Server + Stored Queries
-
-### 📘 Included Diagrams
-
-* 🏛 Architecture Diagram
-* 🗂 ER Diagram
-* 📐 UML Use Case Diagram
-* 🧱 Class Diagram
+* 🔑 **Login System**: Secure credentials & role-based UI
+* 📚 **Inventory Management**: Add/Update/Delete/Search Books
+* 👥 **Customer Management**: Add/update details, view history
+* 🛒 **Sales Transaction (POS)**: Bill, discounts, print receipts, auto-stock update
+* 🚚 **Order Management**: Place orders, pickup/delivery, update status
+* 🏭 **Supplier Management**: Add/Update suppliers, restock, manage orders
+* 📊 **Reports & Analytics**: Sales overview, top-sellers, inventory insights
 
 ---
 
-# 🧪 Test Cases Covered
+## 🏗 Architecture
 
-✔ Login success & failure
-✔ Add/Update/Delete Books
-✔ Restock orders
-✔ Sales & receipt generation
-✔ Customer operations
-✔ Customer order placement
+**Multi-layer Design:**
+
+* 🎨 **UI Layer**: Windows Forms
+* 🧠 **Business Logic Layer**: Handles validation & logic
+* 🗄 **Database Layer**: SQL Server + Stored Queries
+
+**Included Diagrams**: Architecture, ER, UML, Class
 
 ---
 
-# 💡 Future Improvements
+## 🧪 Test Cases Covered
+
+* Login success & failure
+* Add/Update/Delete Books
+* Restock orders
+* Sales & receipt generation
+* Customer operations
+* Customer order placement
+
+---
+
+## 💡 Future Improvements
 
 * ☁ Cloud Sync
 * 📈 Advanced Graphical Reporting
@@ -253,17 +165,16 @@ SQL Server + Stored Queries
 
 ---
 
-# 📝 Author
+## 📝 Author
 
 👤 **I M Zairaz (Zai)**
-GitHub: **[@imzairaz](https://github.com/imzairaz)**
+GitHub: [@imzairaz](https://github.com/imzairaz)
 
 ---
 
+## 📄 License
 
-# 📄 License
-
-This project is licensed under the **MIT License**.
+MIT License – [See License](https://opensource.org/licenses/MIT)
 
 ---
 
