@@ -44,15 +44,49 @@ It is ideal for bookstore staff and administrators who want a clean and efficien
 ## Login Interface
 ![JPEG image](https://github.com/user-attachments/assets/421c44f0-9b49-49d0-8c55-4f997e9f91a3)
 
-## Admin Dashboard
+
+
+## Login
 ![JPEG image 2](https://github.com/user-attachments/assets/cbb2e2f1-4ba0-4e95-ae3a-87b5e24836a1)
+
+
+
+## Admin Dashboard
 ![JPEG image 3](https://github.com/user-attachments/assets/c5a6c2ab-9996-4816-b554-602f23abee31)
+
+
+
+## Clerk Interface (Admin)
 ![JPEG image 4](https://github.com/user-attachments/assets/ad8a847d-5d9b-4554-a960-9a54f6039858)
+
+
+
+## Inventory (Admin)
 ![JPEG image 5](https://github.com/user-attachments/assets/532787b5-fe15-47d1-b317-13eba00af517)
+
+
+
+## Restock (Admin)
 ![JPEG image 6](https://github.com/user-attachments/assets/6948a8d2-5f2d-409a-9e63-6fc359a39e12)
+
+
+
+## Suppliers (Admin)
 ![JPEG image 7](https://github.com/user-attachments/assets/7a5a6428-b4b8-467c-a6be-93f3d21d0b1f)
+
+
+
+## POS
 ![JPEG image 8](https://github.com/user-attachments/assets/2d844aa0-7cad-4cae-a4e0-a6917dbe0dd2)
+
+
+
+## Manage Customer (Clerk)
 ![JPEG image 9](https://github.com/user-attachments/assets/a8e27061-0f02-48bc-9779-de73b3442daa)
+
+
+
+## Order (Clerk)
 ![JPEG image 10](https://github.com/user-attachments/assets/b7ed4e91-3f9b-490e-8eb9-8cf5935c6a77)
 
 
