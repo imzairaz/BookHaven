@@ -75,7 +75,7 @@
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/BookHaven.git
+   git clone https://github.com/imzairaz/BookHaven.git
    ```
 
 2. **Open Project**
