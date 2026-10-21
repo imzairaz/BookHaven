@@ -37,13 +37,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\Downloads\Guna or Bunifu UI\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\Lib\Bunifu_UI_v1.52.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\..\Downloads\Guna or Bunifu UI\Guna.UI.dll</HintPath>
+      <HintPath>..\Lib\Guna.UI.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\..\Downloads\38833FF26BA1D.UnigramPreview_g9c9v27vpyspw!App\GunaUI-2.0.4.7_GunaCharts-1.1.0\GunaProducts\guna.ui2.winforms.2.0.4.7\net472\Cracked\Guna.UI2.dll</HintPath>
+      <HintPath>..\Lib\Guna.UI2.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
